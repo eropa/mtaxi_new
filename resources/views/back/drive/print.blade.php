@@ -64,6 +64,10 @@
                                         <button type="button" class="btn btn-primary" onclick="btClick({{$data->id}})">
                                             Сформировать отдельно
                                         </button>
+                                        <hr>
+                                        <button type="button" class="btn btn-success" onclick="btClick1({{$data->id}})">
+                                            Сформировать отдельно (новая форма)
+                                        </button>
                                     </tr>
                                 @endforeach
 
@@ -100,6 +104,16 @@
             var sUrl="{{@url('upanel/pdf/')}}/"+id+"/"+elementstart+"/"+elementend;
             // // октрываем страницу
            window.open(sUrl,'_blank');
+        }
+
+        function btClick1(id){
+            // получаем дату
+            elementstart = document.getElementById("start"+id).value;
+            elementend = document.getElementById("end"+id).value;
+            // переменая для открытия
+            var sUrl="{{@url('upanel/pdf1/')}}/"+id+"/"+elementstart+"/"+elementend;
+            // // октрываем страницу
+            window.open(sUrl,'_blank');
         }
 
 

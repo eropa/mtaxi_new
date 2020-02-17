@@ -74,6 +74,12 @@ Route::middleware(['auth'])->group(function () {
         return 0;
     });
 
+    // открываем страницу для формирование пдф файла
+    Route::get('upanel/pdf1/{id?}/{datastart?}/{dataend?}','DriveController@print_get1',
+        function ($id = null,$datastart=null,$dataend=null) {
+            return 0;
+        });
+
     // получаем данные фирм с помощью аякс
     Route::get('upanel/updatefirma','FirmaController@ajaxGet');
 

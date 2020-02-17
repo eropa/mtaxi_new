@@ -148,6 +148,27 @@ class DriveController extends Controller
         $printservice->printPdf($data,$datastart,$dataend);
     }
 
+
+    /**
+     * Новая форма печати
+     * @param null $id
+     * @param null $datastart
+     * @param null $dataend
+     * @param PrintService $printservice
+     */
+    public function print_get1($id = null,
+                               $datastart=null,
+                               $dataend=null,
+                               PrintService $printservice){
+        // получаем данные
+        $data=Drive::find($id);
+        // записываем в лог
+        $printservice->InsertLogPrint($data,$datastart,$dataend);
+        // Выводим на пдф печать
+        $printservice->printPdfNewForm($data,$datastart,$dataend);
+    }
+
+
     /**
      * Получаем логирование
      * @param int $id

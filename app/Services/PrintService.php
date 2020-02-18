@@ -28,7 +28,18 @@ class PrintService{
      */
     public function printPdf($data,$datastart,$datastop,$save=false){
 
-        $months = array( 1 => 'Январь' , 'Февраль' , 'Март' , 'Апрель' , 'Май' , 'Июнь' , 'Июль' , 'Август' , 'Сентябрь' , 'Октябрь' , 'Ноябрь' , 'Декабрь' );
+        $months = array( 1 => 'января' ,
+                            'февраля' ,
+                            'марта' ,
+                            'апреля' ,
+                            'мая' ,
+                            'июня' ,
+                            'июля' ,
+                            'августа' ,
+                            'сентября' ,
+                            'октября' ,
+                            'ноября' ,
+                            'декабря' );
 
 
         $datetime1 = new DateTime($datastart);
@@ -199,8 +210,18 @@ class PrintService{
     }
 
     public function printPdfNewForm($data,$datastart,$datastop,$save=false){
-        // месяца на русском
-        $months = array( 1 => 'Январь' , 'Февраль' , 'Март' , 'Апрель' , 'Май' , 'Июнь' , 'Июль' , 'Август' , 'Сентябрь' , 'Октябрь' , 'Ноябрь' , 'Декабрь' );
+        $months = array( 1 => 'января' ,
+            'февраля' ,
+            'марта' ,
+            'апреля' ,
+            'мая' ,
+            'июня' ,
+            'июля' ,
+            'августа' ,
+            'сентября' ,
+            'октября' ,
+            'ноября' ,
+            'декабря' );
         // дата
         $datetime1 = new DateTime($datastart);
         $datetime2 = new DateTime($datastop);
@@ -395,7 +416,7 @@ class PrintService{
             $pdf->SetXY(70,174);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 05час37мие"));
+                " 05час37мин"));
 
             $pdf->SetXY(26,182);
             $pdf->Write(0,iconv('utf-8',
@@ -486,7 +507,7 @@ class PrintService{
             $pdf->SetXY(22,66.5);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                "ЛЕГКОВОй АВТОМОБИЛЬ (В)"));
+                "ЛЕГКОВОЙ АВТОМОБИЛЬ (В)"));
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(82,66.5);
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->regnomer1));
@@ -678,7 +699,7 @@ class PrintService{
         }
         //dd('dsdsa');
         //предлогаем сохранить файл
-        $pdf->Output($data->fiosmal."_".$data->gosnomer."_".$datastart."_".$datastop.".pdf",'D',true);
+        $pdf->Output($data->fiosmal."_".$data->gosnomer."_".$datastart."_".$datastop.".pdf",'I',true);
     }
 
     /**

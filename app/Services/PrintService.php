@@ -315,7 +315,7 @@ class PrintService{
             $pdf->SetXY(22,66.5);
             $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                            "B1 ЛЕГКОВОЙ АВТОМОБИЛЬ"));
+                            "ЛЕГКОВОЙ АВТОМОБИЛЬ (B)"));
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(82,66.5);
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->regnomer1));
@@ -360,7 +360,7 @@ class PrintService{
             $pdf->SetXY(108,123);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 05ч.22м."));
+                " 05час22мин"));
 
 
 
@@ -377,7 +377,7 @@ class PrintService{
             $pdf->SetXY(69,162);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 05ч.34м."));
+                " 05час34мин"));
 
 
 
@@ -395,12 +395,12 @@ class PrintService{
             $pdf->SetXY(70,174);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 05ч.37м."));
+                " 05час37мие"));
 
             $pdf->SetXY(26,182);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 05ч.42м."));
+                " 05час42мин"));
 
             //*********************************************************
             // добовляем страницу*******************************
@@ -486,7 +486,7 @@ class PrintService{
             $pdf->SetXY(22,66.5);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                "B1,(легковой автомобиль)"));
+                "ЛЕГКОВОй АВТОМОБИЛЬ (В)"));
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(82,66.5);
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->regnomer1));
@@ -531,7 +531,7 @@ class PrintService{
             $pdf->SetXY(108,123);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 17ч.22м."));
+                " 17час22мин"));
 
 
 
@@ -548,7 +548,7 @@ class PrintService{
             $pdf->SetXY(69,162);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 17ч.34м."));
+                " 17час34мин"));
 
 
 
@@ -566,12 +566,12 @@ class PrintService{
             $pdf->SetXY(70,174);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 17ч.37м."));
+                " 17час37мин"));
 
             $pdf->SetXY(26,182);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 17ч.42м."));
+                " 17час42мин"));
 
             /*
             $pdf->SetXY(78,17);
@@ -672,7 +672,7 @@ class PrintService{
 
             $pdf->Line(8.85,20.3,8.85,189.3);
                 */
-            $dataFor->modify("+24 hours");
+           // $dataFor->modify("+24 hours");
             $data_=strtotime($dataFor->format('Y-m-d'));
             $data_=$data_+1;
         }

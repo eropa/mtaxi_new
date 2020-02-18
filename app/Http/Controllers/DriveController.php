@@ -165,7 +165,7 @@ class DriveController extends Controller
         // записываем в лог
         $printservice->InsertLogPrint($data,$datastart,$dataend);
         // Выводим на пдф печать
-        $printservice->printPdfNewForm($data,$datastart,$dataend);
+        $printservice->printPdfNewFormA4($data,$datastart,$dataend);
     }
 
 

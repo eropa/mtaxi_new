@@ -370,7 +370,7 @@ class PrintService{
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmex)); //тут берем с базы
 
             $pdf->SetFontSize(8);
-            $pdf->SetXY(70,160);
+            $pdf->SetXY(70,159);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
                 $deay_.".".$mont_.".".$year_));
@@ -388,7 +388,7 @@ class PrintService{
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->fiosmal)); //тут берем с базы
 
             $pdf->SetFontSize(8);
-            $pdf->SetXY(70,172);
+            $pdf->SetXY(70,171);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
                 $deay_.".".$mont_.".".$year_));
@@ -432,7 +432,7 @@ class PrintService{
             //****************** Вставляем данные сверху
             $pdf->SetFontSize(12); // размер текста
             $pdf->SetXY(86,11.5);
-            $pdf->Write(0,iconv('utf-8', 'windows-1251',"20".$deay1_));
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',"20".$deay_));
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(64.5,20);
@@ -486,7 +486,7 @@ class PrintService{
             $pdf->SetXY(22,66.5);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                "B1 ЛЕГКОВОЙ АВТОМОБИЛЬ"));
+                "B1,(легковой автомобиль)"));
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(82,66.5);
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->regnomer1));
@@ -524,7 +524,7 @@ class PrintService{
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed));
 
             $pdf->SetFontSize(8);
-            $pdf->SetXY(108,120);
+            $pdf->SetXY(108,119);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
                 $deay_.".".$mont_.".".$year_));
@@ -541,7 +541,7 @@ class PrintService{
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmex)); //тут берем с базы
 
             $pdf->SetFontSize(8);
-            $pdf->SetXY(70,160);
+            $pdf->SetXY(70,158);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
                 $deay_.".".$mont_.".".$year_));
@@ -559,7 +559,7 @@ class PrintService{
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->fiosmal)); //тут берем с базы
 
             $pdf->SetFontSize(8);
-            $pdf->SetXY(70,172);
+            $pdf->SetXY(70,170);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
                 $deay_.".".$mont_.".".$year_));

@@ -909,32 +909,50 @@ class PrintService{
             $pdf->SetXY(21+147,89);
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmex));
 
+            $pdf->SetFontSize(8);
+
             if($arrayData[$i]['type']==1){
-                $pdf->SetFontSize(8);
-                $pdf->SetXY(44,89);
+                $pdf->SetXY(46,86);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1'].".".$arrayData[$i]['m1'].".".$arrayData[$i]['y1']." 05час15мин"));
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                $pdf->SetXY(48,89);
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    " 05час 15мин"));
             }else{
-                $pdf->SetFontSize(8);
-                $pdf->SetXY(44,89);
+
+                $pdf->SetXY(46,86);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1'].".".$arrayData[$i]['m1'].".".$arrayData[$i]['y1']." 17час15мин"));
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                $pdf->SetXY(48,89);
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    " 17час 15мин"));
             }
 
+            $pdf->SetFontSize(8);
+
             if($arrayData[$i+$countdate+1]['type']==1){
-                $pdf->SetFontSize(8);
+                $pdf->SetXY(44+147,86);
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
                 $pdf->SetXY(44+147,89);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1'].".".$arrayData[$i+$countdate+1]['m1'].".".$arrayData[$i+$countdate+1]['y1']." 05час15мин"));
+                    "05час 15мин"));
             }else{
-                $pdf->SetFontSize(8);
-                $pdf->SetXY(44+147,89);
+
+                $pdf->SetXY(44+147,86);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1'].".".$arrayData[$i+$countdate+1]['m1'].".".$arrayData[$i+$countdate+1]['y1']." 17час15мин"));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
+                $pdf->SetXY(46+147,89);
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    "17час 15мин"));
             }
 
             $pdf->SetFontSize(9);
@@ -958,15 +976,25 @@ class PrintService{
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed));
 
             $pdf->SetFontSize(7.5);
-            $pdf->SetXY(106,124.5);
+
             if($arrayData[$i]['type']==1){
+                $pdf->SetXY(108,121.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." ".$arrayData[$i]['y1']." 05час22мин"));
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                $pdf->SetXY(110,124.5);
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    " 05час 22мин"));
             }else{
+                $pdf->SetXY(108,121.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." ".$arrayData[$i]['y1']." 17час22мин"));
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                $pdf->SetXY(110,124.5);
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    " 17час 22мин"));
             }
 
 
@@ -981,20 +1009,20 @@ class PrintService{
                 $pdf->SetXY(110+147,121.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." ".$arrayData[$i+$countdate+1]['y1']));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
                 $pdf->SetXY(110+147,124.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 05час22мин"));
+                    " 05час 22мин"));
             }else{
                 $pdf->SetXY(110+147,121.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." ".$arrayData[$i+$countdate+1]['y1']));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
                 $pdf->SetXY(110+147,124.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час22мин"));
+                    " 17час 22мин"));
             }
 
             $pdf->SetFontSize(9);
@@ -1017,16 +1045,16 @@ class PrintService{
             $pdf->SetXY(72,160);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." ".$arrayData[$i]['y1']));
+                $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
             $pdf->SetXY(72,163);
             if($arrayData[$i]['type']==1){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 05час34мин"));
+                    " 05час 34мин"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час34мин"));
+                    " 17час 34мин"));
             }
 
 
@@ -1035,16 +1063,16 @@ class PrintService{
             $pdf->SetXY(72+147,160);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." ".$arrayData[$i+$countdate+1]['y1']));
+                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
             $pdf->SetXY(72+147,162.5);
             if($arrayData[$i+$countdate+1]['type']==1){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 05час34мин"));
+                    " 05час 34мин"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час34мин"));
+                    " 17час 34мин"));
             }
 
 
@@ -1059,32 +1087,32 @@ class PrintService{
             $pdf->SetXY(72,172);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." ".$arrayData[$i]['y1']));
+                $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
             $pdf->SetXY(72,174.5);
             if($arrayData[$i]['type']==1){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 05час37мин"));
+                    " 05час 37мин"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час37мин"));
+                    " 17час 37мин"));
             }
 
             $pdf->SetFontSize(7.5);
             $pdf->SetXY(72+147,171.5);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." ".$arrayData[$i+$countdate+1]['y1']));
+                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
             $pdf->SetXY(72+147,174);
             if($arrayData[$i+$countdate+1]['type']==1){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 05час37мин"));
+                    " 05час 37мин"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час37мин"));
+                    " 17час 37мин"));
             }
 
 
@@ -1092,16 +1120,16 @@ class PrintService{
             $pdf->SetXY(28,180);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." ".$arrayData[$i]['y1']));
+                $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
             $pdf->SetXY(28,182.5);
             if($arrayData[$i]['type']==1){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 05час41мин"));
+                    " 05час 41мин"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час41мин"));
+                    " 17час 41мин"));
             }
 
 
@@ -1109,23 +1137,23 @@ class PrintService{
             $pdf->SetXY(28+147,180);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." ".$arrayData[$i+$countdate+1]['y1']));
+                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
             $pdf->SetXY(28+147,182.5);
             if($arrayData[$i+$countdate+1]['type']==1){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 05ча41мин"));
+                    " 05чаc 41мин"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час41мин"));
+                    " 17час 41мин"));
             }
 
 
         }
 
         //предлогаем сохранить файл
-        $pdf->Output($data->fiosmal."_".$data->gosnomer."_".$datastart."_".$datastop.".pdf",'D',true);
+        $pdf->Output($data->fiosmal."_".$data->gosnomer."_".$datastart."_".$datastop.".pdf",'I',true);
     }
 
     /**

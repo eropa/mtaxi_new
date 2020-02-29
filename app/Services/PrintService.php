@@ -714,6 +714,15 @@ class PrintService{
             // вставвляем слой с точки 0 и 0 и увеличиваем на 155 процентов
             $pdf -> useImportedPage($tplIdx,-2,3,300);
 
+            $pdf->SetFontSize(7);
+            $pdf->SetXY(10,7.5);
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->fiosmal));
+
+            $pdf->SetFontSize(7);
+            $pdf->SetXY(10+147,7.5);
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->fiosmal));
+
+
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(87,16.5);
             $pdf->Write(0,iconv('utf-8',
@@ -1153,7 +1162,7 @@ class PrintService{
         }
 
         //предлогаем сохранить файл
-        $pdf->Output($data->fiosmal."_".$data->gosnomer."_".$datastart."_".$datastop.".pdf",'D',true);
+        $pdf->Output($data->fiosmal."_".$data->gosnomer."_".$datastart."_".$datastop.".pdf",'I',true);
     }
 
     /**

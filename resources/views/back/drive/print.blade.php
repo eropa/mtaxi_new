@@ -129,7 +129,7 @@
             for (var i = 0; i < checkboxes.length; i++) {
                 array.push(checkboxes[i].value);
               //  alert(checkboxes[i].value);
-                btClick(checkboxes[i].value);
+                btClick1(checkboxes[i].value);
             }
 
 

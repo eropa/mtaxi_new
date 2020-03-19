@@ -531,7 +531,7 @@ class PrintService{
             $pdf->SetXY(44,86);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $deay_.".".$mont_.".".$year_." 17час15мин"));
+                $deay_.".".$mont_.".".$year_." 16час15мин"));
 
             $pdf->SetFontSize(9);
             $pdf->SetXY(11,101);
@@ -552,7 +552,7 @@ class PrintService{
             $pdf->SetXY(108,123);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 17час22мин"));
+                " 16час22мин"));
 
 
 
@@ -569,7 +569,7 @@ class PrintService{
             $pdf->SetXY(69,162);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 17час34мин"));
+                " 16час34мин"));
 
 
 
@@ -587,12 +587,12 @@ class PrintService{
             $pdf->SetXY(70,174);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 17час37мин"));
+                " 16час37мин"));
 
             $pdf->SetXY(26,182);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                " 17час42мин"));
+                " 16час42мин"));
 
 
             $data_=strtotime($dataFor->format('Y-m-d'));
@@ -938,7 +938,7 @@ class PrintService{
                 $pdf->SetXY(48,89);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час 15мин"));
+                    " 16час 15мин"));
             }
 
             $pdf->SetFontSize(8);
@@ -961,7 +961,7 @@ class PrintService{
                 $pdf->SetXY(46+147,89);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    "17час 15мин"));
+                    "16час 15мин"));
             }
 
             $pdf->SetFontSize(9);
@@ -1003,7 +1003,7 @@ class PrintService{
                 $pdf->SetXY(110,124.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час 22мин"));
+                    " 16час 22мин"));
             }
 
 
@@ -1031,7 +1031,7 @@ class PrintService{
                 $pdf->SetXY(110+147,124.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час 22мин"));
+                    " 16час 22мин"));
             }
 
             $pdf->SetFontSize(9);
@@ -1063,7 +1063,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час 34мин"));
+                    " 16час 34мин"));
             }
 
 
@@ -1081,7 +1081,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час 34мин"));
+                    " 16час 34мин"));
             }
 
 
@@ -1105,7 +1105,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час 37мин"));
+                    " 16час 37мин"));
             }
 
             $pdf->SetFontSize(7.5);
@@ -1121,7 +1121,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час 37мин"));
+                    " 16час 37мин"));
             }
 
 
@@ -1138,7 +1138,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час 41мин"));
+                    " 16час 41мин"));
             }
 
 
@@ -1155,7 +1155,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    " 17час 41мин"));
+                    " 16час 41мин"));
             }
 
 

@@ -6,6 +6,7 @@ use App\Models\Cotrudnik;
 use App\Models\Drive;
 use App\Models\Firma;
 use App\Models\Reportdrive;
+use Carbon\Carbon;
 use DateTime;
 use setasign\Fpdi\Fpdi;
 use Codedge\Fpdf\Fpdf\Fpdf;
@@ -621,16 +622,13 @@ class PrintService{
 
     public function printPdfNewFormA4($data,$datastart,$datastop,$save=false){
         if(is_null($datastart)){
-            $datastart=Date('Y-m-01');
+            $datastart=Date('Y-m-'.date('d'));
         }
 
         if(is_null($datastop)){
-            //текущая дата в Unix формате
-            $currentDate = time();
-            //подставляем текущую дату и параметр
-            //последнего дня текущего месяца "t" в функцию date()
-            $lastDay = date('t', $currentDate);
-            $datastop=Date('Y-m-'.$lastDay);
+            $dateEnd = new DateTime($datastart);
+            $dateEnd->modify('last day of this month');
+            $datastop=Date($dateEnd->format('Y-m-d'));
         }
 
         $months = array( 1 => 'января' ,
@@ -1203,19 +1201,14 @@ class PrintService{
      * @param $datastop
      */
     public function InsertLogPrint($data,$datastart,$datastop){
-
-        //   dd($datastop);
         if(is_null($datastart)){
-            $datastart=Date('Y-m-01');
+            $datastart=Date('Y-m-'.date('d'));
         }
 
         if(is_null($datastop)){
-            //текущая дата в Unix формате
-            $currentDate = time();
-            //подставляем текущую дату и параметр
-            //последнего дня текущего месяца "t" в функцию date()
-            $lastDay = date('t', $currentDate);
-            $datastop=Date('Y-m-'.$lastDay);
+            $dateEnd = new DateTime($datastart);
+            $dateEnd->modify('last day of this month');
+            $datastop=Date($dateEnd->format('Y-m-d'));
         }
 
        // dump($datastart);

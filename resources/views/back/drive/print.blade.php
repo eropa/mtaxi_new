@@ -21,6 +21,12 @@
                             </button>
                             <br>
 
+                            <form>
+
+                            </form>
+
+                            <br>
+
                         <div class="table-responsive">
                             <table class="table table-hover table-dark">
                                 <thead>
@@ -45,8 +51,6 @@
                                                    value="{{ $data->id }}"
                                                    id="defaultCheck_{{ $data->id }}">
                                             {{ $data->name }}
-
-                                            </a>
                                             (<a href="{{ url('upanel/driver/log/'.$data->id) }}"
                                                 target="_blank"
                                             > лог</a>) </td>

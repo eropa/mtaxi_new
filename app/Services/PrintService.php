@@ -210,6 +210,22 @@ class PrintService{
     }
 
     public function printPdfNewForm($data,$datastart,$datastop,$save=false){
+
+        //   dd($datastop);
+        if(is_null($datastart)){
+            $datastart=Date('Y-m-01');
+        }
+
+        if(is_null($datastop)){
+            //текущая дата в Unix формате
+            $currentDate = time();
+            //подставляем текущую дату и параметр
+            //последнего дня текущего месяца "t" в функцию date()
+            $lastDay = date('t', $currentDate);
+            $datastop=Date('Y-m-'.$lastDay);
+        }
+
+
         $months = array( 1 => 'января' ,
             'февраля' ,
             'марта' ,
@@ -604,6 +620,19 @@ class PrintService{
     }
 
     public function printPdfNewFormA4($data,$datastart,$datastop,$save=false){
+        if(is_null($datastart)){
+            $datastart=Date('Y-m-01');
+        }
+
+        if(is_null($datastop)){
+            //текущая дата в Unix формате
+            $currentDate = time();
+            //подставляем текущую дату и параметр
+            //последнего дня текущего месяца "t" в функцию date()
+            $lastDay = date('t', $currentDate);
+            $datastop=Date('Y-m-'.$lastDay);
+        }
+
         $months = array( 1 => 'января' ,
             'февраля' ,
             'марта' ,
@@ -621,6 +650,8 @@ class PrintService{
         $datetime2 = new DateTime($datastop);
         // кол-во дней между интервалми
         $difference = $datetime1->diff($datetime2);
+
+        //dd($datetime2);
         // кол-во днкй
         $countdate=$difference->days;
 
@@ -1172,6 +1203,23 @@ class PrintService{
      * @param $datastop
      */
     public function InsertLogPrint($data,$datastart,$datastop){
+
+        //   dd($datastop);
+        if(is_null($datastart)){
+            $datastart=Date('Y-m-01');
+        }
+
+        if(is_null($datastop)){
+            //текущая дата в Unix формате
+            $currentDate = time();
+            //подставляем текущую дату и параметр
+            //последнего дня текущего месяца "t" в функцию date()
+            $lastDay = date('t', $currentDate);
+            $datastop=Date('Y-m-'.$lastDay);
+        }
+
+       // dump($datastart);
+       // dd($datastop);
         // модель
         $models=new Reportdrive();
         // записываем данные

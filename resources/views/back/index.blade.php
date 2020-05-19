@@ -18,7 +18,7 @@
 
                         Здравствуй пользователь<br>
                             <h3>
-                                <a href="https://github.com/eropa/mtaxi">
+                                <a href="https://github.com/eropa/mtaxi_new">
                                     Исходник системы
                                 </a>
                             </h3>

@@ -630,6 +630,11 @@ class PrintService{
             $dateEnd->modify('last day of this month');
             $datastop=Date($dateEnd->format('Y-m-d'));
         }
+        if($datastart>$datastop){
+            $dateEnd = new DateTime($datastart);
+            $dateEnd->modify('last day of this month');
+            $datastop=Date($dateEnd->format('Y-m-d'));
+        }
 
         $months = array( 1 => 'января' ,
             'февраля' ,
@@ -1210,7 +1215,11 @@ class PrintService{
             $dateEnd->modify('last day of this month');
             $datastop=Date($dateEnd->format('Y-m-d'));
         }
-
+        if($datastart>$datastop){
+            $dateEnd = new DateTime($datastart);
+            $dateEnd->modify('last day of this month');
+            $datastop=Date($dateEnd->format('Y-m-d'));
+        }
        // dump($datastart);
        // dd($datastop);
         // модель

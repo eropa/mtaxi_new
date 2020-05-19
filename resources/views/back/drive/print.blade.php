@@ -41,6 +41,12 @@
                                 </tr>
                                 </thead>
                                 <tbody id="myTable">
+                                <?php
+                                    $datastart=Date('Y-m-'.date('d'));
+                                    $dateEnd = new DateTime($datastart);
+                                    $dateEnd->modify('last day of this month');
+                                    $datastop=Date($dateEnd->format('Y-m-d'));
+                                ?>
                                 @foreach($datas as $data)
                                     <tr>
                                         <th scope="row">{{ $data->id }}
@@ -60,8 +66,8 @@
                                         <td>{{ $data->gosnomer }}</td>
                                         <td>
                                             <form method="post">
-                                                с  <input type="date" id="start{{$data->id}}" name="trip-start"> <br>
-                                                по <input type="date" id="end{{$data->id}}" name="trip-end"><br>
+                                                с  <input type="date" id="start{{$data->id}}"   value="{{$datastart}}"  name="trip-start"> <br>
+                                                по <input type="date" id="end{{$data->id}}"   value="{{$datastop}}" name="trip-end"><br>
                                                 <input type="hidden" name="id_" value="{{$data->id}}">
                                             </form>
 

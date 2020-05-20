@@ -8,6 +8,8 @@ use App\Models\Drive;
 use App\Models\Firma;
 use App\Services\DriveService;
 use App\Services\PrintService;
+use Carbon\Carbon;
+use Cassandra\Date;
 use Codedge\Fpdf\Fpdf\Fpdf;
 use Illuminate\Http\Request;
 use setasign\Fpdi\Fpdi;
@@ -160,6 +162,8 @@ class DriveController extends Controller
                                $datastart=null,
                                $dataend=null,
                                PrintService $printservice){
+        $datastart=Carbon::create(substr($datastart,6,4),substr($datastart,3,2),substr($datastart,0,2))->format('Y-m-d');
+        $dataend=Carbon::create(substr($dataend,6,4),substr($dataend,3,2),substr($dataend,0,2))->format('Y-m-d');
         // получаем данные
         $data=Drive::find($id);
         // записываем в лог

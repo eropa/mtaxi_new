@@ -42,10 +42,12 @@
                                 </thead>
                                 <tbody id="myTable">
                                 <?php
-                                    $datastart=Date('Y-m-'.date('d'));
+                                   // $datastart=Date('Y-m-'.date('d'));
+                                    $datastart=Date(date('d').'-m-Y');
                                     $dateEnd = new DateTime($datastart);
                                     $dateEnd->modify('last day of this month');
-                                    $datastop=Date($dateEnd->format('Y-m-d'));
+
+                                    $datastop=Date($dateEnd->format('d').'-m-Y');
                                 ?>
                                 @foreach($datas as $data)
                                     <tr>
@@ -66,8 +68,14 @@
                                         <td>{{ $data->gosnomer }}</td>
                                         <td>
                                             <form method="post">
-                                                с  <input type="date" id="start{{$data->id}}"   value="{{$datastart}}"  name="trip-start"> <br>
-                                                по <input type="date" id="end{{$data->id}}"   value="{{$datastop}}" name="trip-end"><br>
+
+                                                с  <input type="text"
+                                                          class="datepicker"
+                                                          id="start{{$data->id}}"
+                                                          value="{{$datastart}}"
+                                                          onchange="btUpdateDate({{$data->id}})"
+                                                > <br>
+                                                по <input type="text" class="datepicker" id="end{{$data->id}}"   value="{{$datastop}}" ><br>
                                                 <input type="hidden" name="id_" value="{{$data->id}}">
                                             </form>
 
@@ -114,6 +122,27 @@
             var sUrl="{{@url('upanel/pdf/')}}/"+id+"/"+elementstart+"/"+elementend;
             // // октрываем страницу
            window.open(sUrl,'_blank');
+        }
+
+        function btUpdateDate(idRecord){
+            elementstart = document.getElementById("start"+idRecord).value;
+            console.log(elementstart);
+            var Year=elementstart.substr(6, 4);
+            var Month=elementstart.substr(3, 2);
+            var day=  new Date( (new Date(Year, Month,1))-1 );
+            document.getElementById("end"+idRecord).value=formatDate(day);
+        }
+
+        function formatDate(date) {
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2) month = '0' + month;
+            if (day.length < 2) day = '0' + day;
+
+            return [day,month,year].join('-');
         }
 
         function btClick1(id){

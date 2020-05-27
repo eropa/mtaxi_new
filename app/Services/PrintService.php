@@ -621,6 +621,7 @@ class PrintService{
     }
 
     public function printPdfNewFormA4($data,$datastart,$datastop,$save=false){
+      //  dd($data);
         if(is_null($datastart)){
             $datastart=Date('Y-m-'.date('d'));
         }
@@ -954,15 +955,25 @@ class PrintService{
 
             $pdf->SetFontSize(8);
 
+            if($data->setTime>0){
+            }
+
             if($arrayData[$i]['type']==1){
                 $pdf->SetXY(46,86);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
                 $pdf->SetXY(48,89);
-                $pdf->Write(0,iconv('utf-8',
-                    'windows-1251',
-                    " 05час 15мин"));
+                if($data->setTime>0){
+
+                }else{
+                    $pdf->Write(0,iconv('utf-8',
+                        'windows-1251',
+                        " 05час 15мин"));
+                }
+
+
+
             }else{
 
                 $pdf->SetXY(46,86);

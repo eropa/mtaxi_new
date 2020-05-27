@@ -168,11 +168,46 @@
                                     >
                                 </div>
 
+
+                                <div class="form-group col-md-6">
+                                    <label>Время</label>
+                                    <input type="checkbox"
+                                           @if($data->setTime>=1)
+                                               checked
+                                               @endif
+
+                                           name="setTime">
+                                    <br>Начало часов
+                                    <input type="number"
+                                           class="form-control col-md-3"
+                                           name="hStart"
+                                           value="{{ $data->hStart }}"
+                                    >
+                                    Начало минут
+                                    <input type="number"
+                                             class="form-control col-md-3"
+                                             name="mStart"
+                                           value="{{ $data->mStart }}"
+                                    >
+                                    Конец часов
+                                    <input type="number"
+                                           class="form-control col-md-3"
+                                           name="hEnd"
+                                           value="{{ $data->hEnd }}"
+                                    >
+                                    Конец минут
+                                    <input type="number"
+                                             class="form-control col-md-3"
+                                             name="mEnd"
+                                           value="{{ $data->mEnd }}"
+                                    >
+                                </div>
+
                             </div>
 
                             @method('PUT')
                             @csrf
-                            <button type="submit" class="btn btn-primary">Обновить</button>
+                            <button type="submit" class="btn btn-primary">Сохранить</button>
                         </form>
                     </div>
                 </div>

@@ -32,6 +32,7 @@ class DriveService{
     }
 
     public function update(Drive $driver,array $array){
+       // dd(isset($array['setTime']));
         // Заполняем данные
         $driver->name=$array['name'];
         $driver->tabelnomer=$array['tabelnomer'];
@@ -47,6 +48,17 @@ class DriveService{
         $driver->ydost2=$array['ydost2'];
         $driver->fiosmal=$array['fiosmal'];
         $driver->phonedrive=$array['phonedrive'];
+
+        if(isset($array['setTime'])){
+            $driver->setTime=1;
+        }else{
+            $driver->setTime=0;
+        }
+
+        $driver->hStart=$array['hStart'];
+        $driver->mStart=$array['mStart'];
+        $driver->hEnd=$array['hEnd'];
+        $driver->mEnd=$array['mEnd'];
         // обновить
         $driver->save();
     }

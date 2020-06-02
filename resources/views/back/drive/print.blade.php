@@ -78,10 +78,11 @@
                                                 по <input type="text" class="datepicker" id="end{{$data->id}}"   value="{{$datastop}}" ><br>
                                                 <input type="hidden" name="id_" value="{{$data->id}}">
                                             </form>
-
+                                        <!--
                                         <button type="button" class="btn btn-primary" onclick="btClick({{$data->id}})">
                                             Сформировать отдельно
                                         </button>
+                                        !-->
                                         <hr>
                                         <button type="button" class="btn btn-success" onclick="btClick1({{$data->id}})">
                                             Сформировать отдельно (новая форма)

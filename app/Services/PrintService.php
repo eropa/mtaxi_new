@@ -687,14 +687,12 @@ class PrintService{
 
         $arrayData=array();
         for($i=0;$i<=$countdate;$i++) {
-
             // год
             $year1_ = date("y", $data_);
             // денб
             $deay_ = date("d", $data_);
             // месяц
             $month_ = $months[date('n', $data_)];
-
             /**
              * для листа 10**
              */
@@ -728,11 +726,9 @@ class PrintService{
                             'y2'=>$year1_,
                             'type'=>2,
                 ];
-
             //$dataFor->modify("+24 hours");
             $data_=strtotime($dataFor->format('Y-m-d'));
             $data_=$data_+1;
-
         }
         //dd($arrayData);
         for($i=0;$i<=$countdate;$i++) {
@@ -748,11 +744,9 @@ class PrintService{
             $tplIdx = $pdf -> importPage(1);
             // вставвляем слой с точки 0 и 0 и увеличиваем на 155 процентов
             $pdf -> useImportedPage($tplIdx,-2,3,300);
-
             $pdf->SetFontSize(7);
             $pdf->SetXY(10,7.5);
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->fiosmal));
-
             $pdf->SetFontSize(7);
             $pdf->SetXY(10+147,7.5);
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$data->fiosmal));
@@ -955,8 +949,8 @@ class PrintService{
 
             $pdf->SetFontSize(8);
 
-            if($data->setTime>0){
-            }
+
+            //dump($i);
 
             if($arrayData[$i]['type']==1){
                 $pdf->SetXY(46,86);
@@ -983,11 +977,7 @@ class PrintService{
                         'windows-1251',
                         " 05час 15мин"));
                 }
-
-
-
             }else{
-
                 $pdf->SetXY(46,86);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
@@ -1012,13 +1002,13 @@ class PrintService{
                         'windows-1251',
                         " 16час 15мин"));
                 }
-
-
-
             }
 
             $pdf->SetFontSize(8);
-
+            /*dump($arrayData);
+            dump($i);
+            dump($countdate);
+            dd($i+$countdate+1);*/
             if($arrayData[$i+$countdate+1]['type']==1){
                 $pdf->SetXY(44+147,86);
                 $pdf->Write(0,iconv('utf-8',
@@ -1026,6 +1016,17 @@ class PrintService{
                     $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
                 $pdf->SetXY(44+147,89);
                 if($data->setTime>0){
+                    $year1__ = date("Y", $data_);
+                    $dataStart1=
+                        Carbon::create(
+                            $year1__,
+                            date('n', $data_),
+                            date("d", $data_),
+                            $data->hStart,
+                            $data->mStart,
+                            0,
+                            'America/Toronto');
+
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $dataStart1->hour."час".$dataStart1->minute."мин"));
@@ -1041,11 +1042,17 @@ class PrintService{
                     'windows-1251',
                     $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
                 $pdf->SetXY(46+147,89);
-
-
-
                 if($data->setTime>0){
-                    $dataStart2;
+                    $year1__ = date("Y", $data_);
+                    $dataStart2=
+                        Carbon::create(
+                            $year1__,
+                            date('n', $data_),
+                            date("d", $data_),
+                            $data->hEnd,
+                            $data->mEnd,
+                            0,
+                            'America/Toronto');
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $dataStart2->hour."час".$dataStart2->minute."мин"));
@@ -1115,8 +1122,6 @@ class PrintService{
                         'windows-1251',
                         " 16час 22мин"));
                 }
-
-
             }
 
 
@@ -1135,6 +1140,7 @@ class PrintService{
                 $pdf->SetXY(110+147,124.5);
                 if($data->setTime>0){
                   //  $dataStart1->subMinute(6);
+                    $dataStart1->addMinute(7);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $dataStart1->hour."час".$dataStart1->minute."мин"));
@@ -1150,6 +1156,7 @@ class PrintService{
                     $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
                 $pdf->SetXY(110+147,124.5);
                 if($data->setTime>0){
+                    $dataStart2->addMinute(7);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $dataStart2->hour."час".$dataStart2->minute."мин"));
@@ -1216,6 +1223,7 @@ class PrintService{
             $pdf->SetXY(72+147,162.5);
             if($arrayData[$i+$countdate+1]['type']==1){
                 if($data->setTime>0){
+                    $dataStart1->addMinute(12);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $dataStart1->hour."час".$dataStart1->minute."мин"));
@@ -1226,6 +1234,7 @@ class PrintService{
                 }
             }else{
                 if($data->setTime>0){
+                    $dataStart2->addMinute(12);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $dataStart2->hour."час".$dataStart2->minute."мин"));
@@ -1282,6 +1291,7 @@ class PrintService{
             $pdf->SetXY(72+147,174);
             if($arrayData[$i+$countdate+1]['type']==1){
                 if($data->setTime>0){
+                    $dataStart1->addMinute(3);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $dataStart1->hour."час".$dataStart1->minute."мин"));
@@ -1292,6 +1302,7 @@ class PrintService{
                 }
             }else{
                 if($data->setTime>0){
+                    $dataStart2->addMinute(3);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $dataStart2->hour."час".$dataStart2->minute."мин"));
@@ -1344,6 +1355,7 @@ class PrintService{
             $pdf->SetXY(28+147,182.5);
             if($arrayData[$i+$countdate+1]['type']==1){
                 if($data->setTime>0){
+                    $dataStart1->addMinute(4);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $dataStart1->hour."час".$dataStart1->minute."мин"));
@@ -1354,6 +1366,7 @@ class PrintService{
                 }
             }else{
                 if($data->setTime>0){
+                    $dataStart2->addMinute(4);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $dataStart2->hour."час".$dataStart2->minute."мин"));

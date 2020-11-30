@@ -777,10 +777,15 @@ class PrintService{
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(91,24.5);
+            if(  $arrayData[$i]['m1']=="декабря"){
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $arrayData[$i]['y1']));
-
+                "20"));
+            }else{
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    "21"));
+            }
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(65+147,24);
@@ -854,7 +859,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    "*21"));
+                    "21"));
             }
 
 

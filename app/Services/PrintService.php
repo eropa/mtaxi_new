@@ -829,7 +829,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    "**21"));
+                    $arrayData[$i]['m2']."**21"));
             }
 
 

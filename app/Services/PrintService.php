@@ -839,7 +839,7 @@ class PrintService{
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(125+147,24);
 
-            if($arrayData[$i]['m2']==12){
+            if($arrayData[$i+$countdate+1]['m2']==12){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     "20"));

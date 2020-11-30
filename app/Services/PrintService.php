@@ -795,7 +795,7 @@ class PrintService{
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(90+147,24);
-            if($arrayData[$i+$countdate+1]['m2']==12){
+            if($arrayData[$i+$countdate+1]['m2']=="декабря"){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                   "20"));
@@ -822,14 +822,14 @@ class PrintService{
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(125,24.5);
 
-            if($arrayData[$i]['m2']==12){
+            if($arrayData[$i]['m2']=="декабря"){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                    "20"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['m2']."**21"));
+                    "21"));
             }
 
 
@@ -847,7 +847,7 @@ class PrintService{
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(125+147,24);
 
-            if($arrayData[$i+$countdate+1]['m2']==12){
+            if($arrayData[$i+$countdate+1]['m2']=="декабря"){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     "20"));

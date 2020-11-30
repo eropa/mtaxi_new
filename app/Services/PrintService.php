@@ -1013,7 +1013,7 @@ class PrintService{
                 $pdf->SetXY(44+147,86);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i]['y1']));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
                 $pdf->SetXY(44+147,89);
                 if($data->setTime>0){
                     $year1__ = date("Y", $data_);
@@ -1040,7 +1040,7 @@ class PrintService{
                 $pdf->SetXY(44+147,86);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i]['y1']));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
                 $pdf->SetXY(46+147,89);
                 if($data->setTime>0){
                     $year1__ = date("Y", $data_);
@@ -1109,7 +1109,7 @@ class PrintService{
                 $pdf->SetXY(108,121.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 20".$arrayData[$i]['y1']));
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
                 $pdf->SetXY(110,124.5);
 
                 if($data->setTime>0){
@@ -1136,7 +1136,7 @@ class PrintService{
                 $pdf->SetXY(110+147,121.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i]['y1']));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
                 $pdf->SetXY(110+147,124.5);
                 if($data->setTime>0){
                   //  $dataStart1->subMinute(6);
@@ -1153,7 +1153,7 @@ class PrintService{
                 $pdf->SetXY(110+147,121.5);
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i]['y1']));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
                 $pdf->SetXY(110+147,124.5);
                 if($data->setTime>0){
                     $dataStart2->addMinute(7);
@@ -1219,7 +1219,7 @@ class PrintService{
             $pdf->SetXY(72+147,160);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i]['y1']));
+                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
             $pdf->SetXY(72+147,162.5);
             if($arrayData[$i+$countdate+1]['type']==1){
                 if($data->setTime>0){
@@ -1287,7 +1287,7 @@ class PrintService{
             $pdf->SetXY(72+147,171.5);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i]['y1']));
+                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
             $pdf->SetXY(72+147,174);
             if($arrayData[$i+$countdate+1]['type']==1){
                 if($data->setTime>0){
@@ -1351,7 +1351,7 @@ class PrintService{
             $pdf->SetXY(28+147,180);
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i]['y1']));
+                $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
             $pdf->SetXY(28+147,182.5);
             if($arrayData[$i+$countdate+1]['type']==1){
                 if($data->setTime>0){

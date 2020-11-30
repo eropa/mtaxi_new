@@ -813,9 +813,17 @@ class PrintService{
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(125,24.5);
-            $pdf->Write(0,iconv('utf-8',
-                'windows-1251',
-                $arrayData[$i]['y2']));
+
+            if($arrayData[$i]['m2']==12){
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                   "20"));
+            }else{
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    "21"));
+            }
+
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(100+147,24);
@@ -830,9 +838,18 @@ class PrintService{
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(125+147,24);
-            $pdf->Write(0,iconv('utf-8',
-                'windows-1251',
-                $arrayData[$i+$countdate+1]['y2']));
+
+            if($arrayData[$i]['m2']==12){
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    "20"));
+            }else{
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    "21"));
+            }
+
+
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(24,38);

@@ -975,7 +975,7 @@ class PrintService{
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmex));
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(21+147,89);
-            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmex));
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmex."1"));
 
             $pdf->SetFontSize(8);
 
@@ -1144,7 +1144,7 @@ class PrintService{
 
             $pdf->SetFontSize(9);
             $pdf->SetXY(75,124.5);
-            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed."1"));
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed));
 
             $pdf->SetFontSize(7.5);
 
@@ -1176,7 +1176,7 @@ class PrintService{
 
             }else{
                 $pdf->SetXY(108,121.5);
-                if($arrayData[$i]['m2']=="декабря"){
+                if($arrayData[$i]['m1']=="декабря"){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
@@ -1206,7 +1206,7 @@ class PrintService{
 
             $pdf->SetFontSize(9);
             $pdf->SetXY(75+147,124.5);
-            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed."2"));
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed));
 
             $pdf->SetFontSize(7.5);
 
@@ -1277,7 +1277,7 @@ class PrintService{
 
             $pdf->SetFontSize(9);
             $pdf->SetXY(75+147,124.5);
-            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed."3"));
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed));
 
 
 

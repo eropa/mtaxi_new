@@ -1174,7 +1174,7 @@ class PrintService{
             if($arrayData[$i+$countdate+1]['type']==1){
                 $pdf->SetXY(110+147,121.5);
 
-                if($arrayData[$i]['$i+$countdate+1']=="декабря"){
+                if($arrayData[$i+$countdate+1]['m2']=="декабря"){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));

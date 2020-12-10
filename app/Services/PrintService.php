@@ -975,7 +975,7 @@ class PrintService{
             $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmex));
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(21+147,89);
-            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmex."1"));
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmex));
 
             $pdf->SetFontSize(8);
 
@@ -1023,9 +1023,18 @@ class PrintService{
                 }
             }else{
                 $pdf->SetXY(46,86);
-                $pdf->Write(0,iconv('utf-8',
-                    'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 20".$arrayData[$i]['y1']));
+                if($arrayData[$i]['m1']=="декабря"){
+                    $pdf->Write(0,iconv('utf-8',
+                        'windows-1251',
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                }else{
+                    $pdf->Write(0,iconv('utf-8',
+                        'windows-1251',
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
+                }
+
+
+
                 $pdf->SetXY(48,89);
                 if($data->setTime>0){
                     $year1__ = date("Y", $data_);

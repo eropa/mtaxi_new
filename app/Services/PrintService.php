@@ -984,9 +984,23 @@ class PrintService{
 
             if($arrayData[$i]['type']==1){
                 $pdf->SetXY(46,86);
-                $pdf->Write(0,iconv('utf-8',
-                    'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 20".$arrayData[$i]['y1']));
+
+
+                if($arrayData[$i]['m1']=="декабря"){
+                    $pdf->Write(0,iconv('utf-8',
+                        'windows-1251',
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                }else{
+                    $pdf->Write(0,iconv('utf-8',
+                        'windows-1251',
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
+                }
+
+
+
+
+
+
                 $pdf->SetXY(48,89);
                 if($data->setTime>0){
                     $year1__ = date("Y", $data_);
@@ -1041,9 +1055,18 @@ class PrintService{
             dd($i+$countdate+1);*/
             if($arrayData[$i+$countdate+1]['type']==1){
                 $pdf->SetXY(44+147,86);
-                $pdf->Write(0,iconv('utf-8',
-                    'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
+                if($arrayData[$i+$countdate+1]['m1']=="декабря"){
+                    $pdf->Write(0,iconv('utf-8',
+                        'windows-1251',
+                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
+                }else{
+                    $pdf->Write(0,iconv('utf-8',
+                        'windows-1251',
+                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
+                }
+
+
+
                 $pdf->SetXY(44+147,89);
                 if($data->setTime>0){
                     $year1__ = date("Y", $data_);
@@ -1068,9 +1091,17 @@ class PrintService{
             }else{
 
                 $pdf->SetXY(44+147,86);
-                $pdf->Write(0,iconv('utf-8',
-                    'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 20".$arrayData[$i+$countdate+1]['y1']));
+                if($arrayData[$i+$countdate+1]['m1']=="декабря"){
+                    $pdf->Write(0,iconv('utf-8',
+                        'windows-1251',
+                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
+                }else{
+                    $pdf->Write(0,iconv('utf-8',
+                        'windows-1251',
+                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
+                }
+
+
                 $pdf->SetXY(46+147,89);
                 if($data->setTime>0){
                     $year1__ = date("Y", $data_);

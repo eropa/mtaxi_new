@@ -1144,7 +1144,7 @@ class PrintService{
 
             $pdf->SetFontSize(9);
             $pdf->SetXY(75,124.5);
-            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed));
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed."1"));
 
             $pdf->SetFontSize(7.5);
 
@@ -1206,7 +1206,7 @@ class PrintService{
 
             $pdf->SetFontSize(9);
             $pdf->SetXY(75+147,124.5);
-            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed));
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed."2"));
 
             $pdf->SetFontSize(7.5);
 
@@ -1277,7 +1277,7 @@ class PrintService{
 
             $pdf->SetFontSize(9);
             $pdf->SetXY(75+147,124.5);
-            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed));
+            $pdf->Write(0,iconv('utf-8', 'windows-1251',$sFIOmed."3"));
 
 
 

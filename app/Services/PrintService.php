@@ -1019,7 +1019,8 @@ class PrintService{
                             'America/Toronto');
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart1->hour."час".$dataStart1->minute."мин"));
+                        ($dataStart1->hour>0 && $dataStart1->hour<=9?'0'.$dataStart1->hour:$dataStart1->hour)."час".
+                        ($dataStart1->minute>0 && $dataStart1->minute<=9?'0'.$dataStart1->minute:$dataStart1->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1053,7 +1054,8 @@ class PrintService{
                             'America/Toronto');
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart2->hour."час".$dataStart2->minute."мин"));
+                        ($dataStart2->hour>0 && $dataStart2->hour<=9?'0'.$dataStart2->hour:$dataStart2->hour)."час".
+                        ($dataStart2->minute>0 && $dataStart2->minute<=9?'0'.$dataStart2->minute:$dataStart2->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1095,7 +1097,8 @@ class PrintService{
 
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart1->hour."час".$dataStart1->minute."мин"));
+                        ($dataStart1->hour>0 && $dataStart1->hour<=9?'0'.$dataStart1->hour:$dataStart1->hour)."час".
+                        ($dataStart1->minute>0 && $dataStart1->minute<=9?'0'.$dataStart1->minute:$dataStart1->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1129,7 +1132,8 @@ class PrintService{
                             'America/Toronto');
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart2->hour."час".$dataStart2->minute."мин"));
+                        ($dataStart2->hour>0 && $dataStart2->hour<=9?'0'.$dataStart2->hour:$dataStart2->hour)."час".
+                        ($dataStart2->minute>0 && $dataStart2->minute<=9?'0'.$dataStart2->minute:$dataStart2->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1179,7 +1183,8 @@ class PrintService{
                     $dataStart1->addMinute(7);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart1->hour."час".$dataStart1->minute."мин"));
+                        ($dataStart1->hour>0 && $dataStart1->hour<=9?'0'.$dataStart1->hour:$dataStart1->hour)."час".
+                        ($dataStart1->minute>0 && $dataStart1->minute<=9?'0'.$dataStart1->minute:$dataStart1->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1207,7 +1212,8 @@ class PrintService{
                     $dataStart2->addMinute(7);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart2->hour."час".$dataStart2->minute."мин"));
+                        ($dataStart2->hour>0 && $dataStart2->hour<=9?'0'.$dataStart2->hour:$dataStart2->hour)."час".
+                        ($dataStart2->minute>0 && $dataStart2->minute<=9?'0'.$dataStart2->minute:$dataStart2->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1247,7 +1253,8 @@ class PrintService{
                         $dataStart1->addMinute(7);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart1->hour."час".$dataStart1->minute."мин"));
+                        ($dataStart1->hour>0 && $dataStart1->hour<=9?'0'.$dataStart1->hour:$dataStart1->hour)."час".
+                        ($dataStart1->minute>0 && $dataStart1->minute<=9?'0'.$dataStart1->minute:$dataStart1->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1270,7 +1277,8 @@ class PrintService{
                         $dataStart2->addMinute(7);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart2->hour."час".$dataStart2->minute."мин"));
+                        ($dataStart2->hour>0 && $dataStart2->hour<=9?'0'.$dataStart2->hour:$dataStart2->hour)."час".
+                        ($dataStart2->minute>0 && $dataStart2->minute<=9?'0'.$dataStart2->minute:$dataStart2->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1309,7 +1317,8 @@ class PrintService{
                     $dataStart1->addMinute(12);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart1->hour."час".$dataStart1->minute."мин"));
+                        ($dataStart1->hour>0 && $dataStart1->hour<=9?'0'.$dataStart1->hour:$dataStart1->hour)."час".
+                        ($dataStart1->minute>0 && $dataStart1->minute<=9?'0'.$dataStart1->minute:$dataStart1->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1320,7 +1329,8 @@ class PrintService{
                     $dataStart2->addMinute(12);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart2->hour."час".$dataStart2->minute."мин"));
+                        ($dataStart2->hour>0 && $dataStart2->hour<=9?'0'.$dataStart2->hour:$dataStart2->hour)."час".
+                        ($dataStart2->minute>0 && $dataStart2->minute<=9?'0'.$dataStart2->minute:$dataStart2->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1351,7 +1361,8 @@ class PrintService{
                         $dataStart1->addMinute(12);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart1->hour."час".$dataStart1->minute."мин"));
+                        ($dataStart1->hour>0 && $dataStart1->hour<=9?'0'.$dataStart1->hour:$dataStart1->hour)."час".
+                        ($dataStart1->minute>0 && $dataStart1->minute<=9?'0'.$dataStart1->minute:$dataStart1->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1363,7 +1374,8 @@ class PrintService{
                         $dataStart2->addMinute(12);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart2->hour."час".$dataStart2->minute."мин"));
+                        ($dataStart2->hour>0 && $dataStart2->hour<=9?'0'.$dataStart2->hour:$dataStart2->hour)."час".
+                        ($dataStart2->minute>0 && $dataStart2->minute<=9?'0'.$dataStart2->minute:$dataStart2->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1398,7 +1410,8 @@ class PrintService{
                     $dataStart1->addMinute(3);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart1->hour."час".$dataStart1->minute."мин"));
+                        ($dataStart1->hour>0 && $dataStart1->hour<=9?'0'.$dataStart1->hour:$dataStart1->hour)."час".
+                        ($dataStart1->minute>0 && $dataStart1->minute<=9?'0'.$dataStart1->minute:$dataStart1->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1409,7 +1422,8 @@ class PrintService{
                     $dataStart2->addMinute(3);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart2->hour."час".$dataStart2->minute."мин"));
+                        ($dataStart2->hour>0 && $dataStart2->hour<=9?'0'.$dataStart2->hour:$dataStart2->hour)."час".
+                        ($dataStart2->minute>0 && $dataStart2->minute<=9?'0'.$dataStart2->minute:$dataStart2->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1438,7 +1452,8 @@ class PrintService{
                         $dataStart1->addMinute(3);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart1->hour."час".$dataStart1->minute."мин"));
+                        ($dataStart1->hour>0 && $dataStart1->hour<=9?'0'.$dataStart1->hour:$dataStart1->hour)."час".
+                        ($dataStart1->minute>0 && $dataStart1->minute<=9?'0'.$dataStart1->minute:$dataStart1->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1450,7 +1465,8 @@ class PrintService{
                        $dataStart2->addMinute(3);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart2->hour."час".$dataStart2->minute."мин"));
+                        ($dataStart2->hour>0 && $dataStart2->hour<=9?'0'.$dataStart2->hour:$dataStart2->hour)."час".
+                        ($dataStart2->minute>0 && $dataStart2->minute<=9?'0'.$dataStart2->minute:$dataStart2->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1483,7 +1499,8 @@ class PrintService{
                     $dataStart1->addMinute(4);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart1->hour."час".$dataStart1->minute."мин"));
+                        ($dataStart1->hour>0 && $dataStart1->hour<=9?'0'.$dataStart1->hour:$dataStart1->hour)."час".
+                        ($dataStart1->minute>0 && $dataStart1->minute<=9?'0'.$dataStart1->minute:$dataStart1->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1496,7 +1513,8 @@ class PrintService{
                     $dataStart2->addMinute(4);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart2->hour."час".$dataStart2->minute."мин"));
+                        ($dataStart2->hour>0 && $dataStart2->hour<=9?'0'.$dataStart2->hour:$dataStart2->hour)."час".
+                        ($dataStart2->minute>0 && $dataStart2->minute<=9?'0'.$dataStart2->minute:$dataStart2->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1527,7 +1545,8 @@ class PrintService{
                     $dataStart1->addMinute(4);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart1->hour."час".$dataStart1->minute."мин"));
+                        ($dataStart1->hour>0 && $dataStart1->hour<=9?'0'.$dataStart1->hour:$dataStart1->hour)."час".
+                        ($dataStart1->minute>0 && $dataStart1->minute<=9?'0'.$dataStart1->minute:$dataStart1->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1539,7 +1558,8 @@ class PrintService{
                       $dataStart2->addMinute(4);
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $dataStart2->hour."час".$dataStart2->minute."мин"));
+                        ($dataStart2->hour>0 && $dataStart2->hour<=9?'0'.$dataStart2->hour:$dataStart2->hour)."час".
+                        ($dataStart2->minute>0 && $dataStart2->minute<=9?'0'.$dataStart2->minute:$dataStart2    ->minute)."мин"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',

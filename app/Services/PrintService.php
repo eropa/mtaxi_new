@@ -1571,7 +1571,7 @@ class PrintService{
         }
 
         //предлогаем сохранить файл
-        $pdf->Output($data->fiosmal."_".$data->gosnomer."_".$datastart."_".$datastop.".pdf",'I',true);
+        $pdf->Output($data->fiosmal."_".$data->gosnomer."_".$datastart."_".$datastop.".pdf",'D',true);
     }
 
     /**

@@ -993,7 +993,7 @@ class PrintService{
                 if($arrayData[$i]['m1']=="декабря"){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1031,7 +1031,7 @@ class PrintService{
                 if($arrayData[$i]['m1']=="декабря"){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1110,7 +1110,7 @@ class PrintService{
                 if($arrayData[$i+$countdate+1]['m1']=="декабря"){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
+                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1170,7 +1170,7 @@ class PrintService{
                 if($arrayData[$i]['m1']=="декабря"){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1197,7 +1197,7 @@ class PrintService{
                 if($arrayData[$i]['m1']=="декабря"){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1237,7 +1237,7 @@ class PrintService{
                 if($arrayData[$i+$countdate+1]['m1']=="декабря"){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
+                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1265,7 +1265,7 @@ class PrintService{
                 if($arrayData[$i+$countdate+1]['m1']=="декабря"){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
+                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
@@ -1303,7 +1303,7 @@ class PrintService{
             if($arrayData[$i]['m1']=="декабря"){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
@@ -1346,7 +1346,7 @@ class PrintService{
             if($arrayData[$i+$countdate+1]['m1']=="декабря"){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
@@ -1396,7 +1396,7 @@ class PrintService{
             if($arrayData[$i]['m1']=="декабря"){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
@@ -1436,7 +1436,7 @@ class PrintService{
             if($arrayData[$i+$countdate+1]['m1']=="декабря"){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
 
             }else{
                 $pdf->Write(0,iconv('utf-8',
@@ -1481,7 +1481,7 @@ class PrintService{
             if($arrayData[$i]['m1']=="декабря"){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2020"));
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
 
             }else{
                 $pdf->Write(0,iconv('utf-8',
@@ -1528,7 +1528,7 @@ class PrintService{
             if($arrayData[$i+$countdate+1]['m1']=="декабря"){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2020"));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
 
 
             }else{

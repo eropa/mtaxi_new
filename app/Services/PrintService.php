@@ -1424,14 +1424,15 @@ class PrintService{
 
             $pdf->SetFontSize(7.5);
             $pdf->SetXY(76,172);
-            if($arrayData[$i]['m1']=="декабря"){
+
+            if( in_array($arrayData[$i]['m1'],$arrayOld)){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2022"));
             }
 
 

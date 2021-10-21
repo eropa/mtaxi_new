@@ -829,7 +829,7 @@ class PrintService{
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(93.5+147,24.1);
-            if( in_array($arrayData[$i+$countdate+1]['m2'],$arrayOld)){
+            if( in_array($arrayData[$i+$countdate+1]['m1'],$arrayOld)){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                   "21"));

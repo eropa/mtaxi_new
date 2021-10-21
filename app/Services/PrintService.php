@@ -42,7 +42,19 @@ class PrintService{
                             'ноября' ,
                             'декабря' );
 
+        $arrayOld= array( 'октября' ,
+                            'ноября' ,
+                            'декабря' );
 
+        $arrayNew= array( 'января' ,
+                        'февраля' ,
+                        'марта' ,
+                        'апреля' ,
+                        'мая' ,
+                        'июня' ,
+                        'июля' ,
+                        'августа' ,
+                        'сентября' );
         $datetime1 = new DateTime($datastart);
 
         $datetime2 = new DateTime($datastop);
@@ -990,14 +1002,14 @@ class PrintService{
                 $pdf->SetXY(49,93);
 
 
-                if($arrayData[$i]['m1']=="декабря"){
+                if( in_array($arrayData[$i]['m1'],$arrayOld)){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2022"));
                 }
 
 
@@ -1028,14 +1040,14 @@ class PrintService{
                 }
             }else{
                 $pdf->SetXY(49,93);
-                if($arrayData[$i]['m1']=="декабря"){
+                if( in_array($arrayData[$i]['m1'],$arrayOld)){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2022"));
                 }
 
 
@@ -1107,14 +1119,14 @@ class PrintService{
             }else{
 
                 $pdf->SetXY(49+147,93);
-                if($arrayData[$i+$countdate+1]['m1']=="декабря"){
+                if( in_array(($arrayData[$i+$countdate+1]['m1'],$arrayOld)){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
+                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2022"));
                 }
 
 
@@ -1167,14 +1179,14 @@ class PrintService{
 
             if($arrayData[$i]['type']==1){
                 $pdf->SetXY(110,125.5);
-                if($arrayData[$i]['m1']=="декабря"){
+                if( in_array($arrayData[$i]['m1'],$arrayOld)){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2022"));
                 }
 
 
@@ -1194,14 +1206,14 @@ class PrintService{
 
             }else{
                 $pdf->SetXY(110,125.5);
-                if($arrayData[$i]['m1']=="декабря"){
+                if( in_array($arrayData[$i]['m1'],$arrayOld)){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
+                        $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2022"));
                 }
 
 
@@ -1234,14 +1246,14 @@ class PrintService{
             if($arrayData[$i+$countdate+1]['type']==1){
                 $pdf->SetXY(110+147,125.5);
 
-                if($arrayData[$i+$countdate+1]['m1']=="декабря"){
+                if( in_array($arrayData[$i+$countdate+1]['m1'],$arrayOld)){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
+                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2022"));
                 }
 
 
@@ -1262,14 +1274,14 @@ class PrintService{
                 }
             }else{
                 $pdf->SetXY(110+147,125.5);
-                if($arrayData[$i+$countdate+1]['m1']=="декабря"){
+                if( in_array($arrayData[$i+$countdate+1]['m1'],$arrayOld)){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
                 }else{
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
-                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
+                        $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2022"));
                 }
                 $pdf->SetXY(110+147,128.5);
                 if($data->setTime>0){
@@ -1300,14 +1312,14 @@ class PrintService{
 
             $pdf->SetFontSize(7.5);
             $pdf->SetXY(77,159.5);
-            if($arrayData[$i]['m1']=="декабря"){
+            if( in_array($arrayData[$i]['m1'],$arrayOld)){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2022"));
             }
 
 
@@ -1433,7 +1445,7 @@ class PrintService{
 
             $pdf->SetFontSize(7.5);
             $pdf->SetXY(76+147,172);
-            if($arrayData[$i+$countdate+1]['m1']=="декабря"){
+            if( in_array($arrayData[$i+$countdate+1]['m1'],$arrayOld))
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
@@ -1441,7 +1453,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2022"));
 
             }
 
@@ -1478,7 +1490,7 @@ class PrintService{
             $pdf->SetFontSize(7.5);
             $pdf->SetXY(28.5,180);
 
-            if($arrayData[$i]['m1']=="декабря"){
+            if( in_array($arrayData[$i]['m1'],$arrayOld)){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
@@ -1486,8 +1498,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2021"));
-
+                    $arrayData[$i]['d1']." ".$arrayData[$i]['m1']." 2022"));
             }
 
 
@@ -1525,7 +1536,7 @@ class PrintService{
 
             $pdf->SetFontSize(7.5);
             $pdf->SetXY(29+147,180);
-            if($arrayData[$i+$countdate+1]['m1']=="декабря"){
+            if(in_array($arrayData[$i+$countdate+1]['m1'],$arrayOld)){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
@@ -1534,7 +1545,7 @@ class PrintService{
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2022"));
             }
 
 

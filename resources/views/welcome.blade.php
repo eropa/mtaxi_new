@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    M_Taxi (v 1.7)
+                    M_Taxi (v 1.7.1)
                 </div>
 
                 <div class="links">

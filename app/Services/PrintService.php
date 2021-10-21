@@ -633,6 +633,23 @@ class PrintService{
     }
 
     public function printPdfNewFormA4($data,$datastart,$datastop,$save=false){
+
+        $arrayOld= array( 'октября' ,
+            'ноября' ,
+            'декабря' );
+
+        $arrayNew= array( 'января' ,
+            'февраля' ,
+            'марта' ,
+            'апреля' ,
+            'мая' ,
+            'июня' ,
+            'июля' ,
+            'августа' ,
+            'сентября' );
+
+
+
       //  dd($data);
         if(is_null($datastart)){
             $datastart=Date('Y-m-'.date('d'));
@@ -789,14 +806,14 @@ class PrintService{
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(92,24.1);
-            if(  $arrayData[$i]['m1']=="декабря"){
+            if( in_array($arrayData[$i]['m1'],$arrayOld)){
             $pdf->Write(0,iconv('utf-8',
                 'windows-1251',
-                "20"));
+                "21"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    "21"));
+                    "22"));
             }
 
             $pdf->SetFontSize(9); // размер текста
@@ -812,14 +829,14 @@ class PrintService{
 
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(93.5+147,24.1);
-            if($arrayData[$i+$countdate+1]['m2']=="декабря"){
+            if( in_array($arrayData[$i+$countdate+1]['m2'],$arrayOld)){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                  "20"));
+                  "21"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    "21"));
+                    "22"));
             }
 
 
@@ -839,14 +856,15 @@ class PrintService{
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(127,24.1);
 
-            if($arrayData[$i]['m2']=="декабря"){
+
+            if( in_array($arrayData[$i]['m2'],$arrayOld)){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                   "20"));
+                   "21"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    "21"));
+                    "22"));
             }
 
 
@@ -864,14 +882,14 @@ class PrintService{
             $pdf->SetFontSize(9); // размер текста
             $pdf->SetXY(128+147,24.1);
 
-            if($arrayData[$i+$countdate+1]['m2']=="декабря"){
-                $pdf->Write(0,iconv('utf-8',
-                    'windows-1251',
-                    "20"));
-            }else{
+            if( in_array($arrayData[$i+$countdate+1]['m2'],$arrayOld)){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     "21"));
+            }else{
+                $pdf->Write(0,iconv('utf-8',
+                    'windows-1251',
+                    "22"));
             }
 
 
@@ -1119,7 +1137,7 @@ class PrintService{
             }else{
 
                 $pdf->SetXY(49+147,93);
-                if( in_array(($arrayData[$i+$countdate+1]['m1'],$arrayOld)){
+                if( in_array($arrayData[$i+$countdate+1]['m1'],$arrayOld)){
                     $pdf->Write(0,iconv('utf-8',
                         'windows-1251',
                         $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
@@ -1355,14 +1373,15 @@ class PrintService{
             $pdf->SetFontSize(7.5);
             $pdf->SetXY(77+147,159.5);
 
-            if($arrayData[$i+$countdate+1]['m1']=="декабря"){
+
+            if( in_array($arrayData[$i+$countdate+1]['m1'],$arrayOld)){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
             }else{
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
-                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
+                    $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2022"));
             }
 
 
@@ -1445,7 +1464,7 @@ class PrintService{
 
             $pdf->SetFontSize(7.5);
             $pdf->SetXY(76+147,172);
-            if( in_array($arrayData[$i+$countdate+1]['m1'],$arrayOld))
+            if( in_array($arrayData[$i+$countdate+1]['m1'],$arrayOld)){
                 $pdf->Write(0,iconv('utf-8',
                     'windows-1251',
                     $arrayData[$i+$countdate+1]['d1']." ".$arrayData[$i+$countdate+1]['m1']." 2021"));
